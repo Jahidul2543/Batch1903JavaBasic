@@ -28,7 +28,7 @@ public class ArrayDemo {
          *
          * */
          // 0, 1, 2, 3
-         for(int x = 0; x<4; x++ ){
+         for(int x = 0; x<=nameOfServices.length -1; x++ ){
              System.out.println(nameOfServices[x]);
          }
 

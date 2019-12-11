@@ -1,3 +1,5 @@
+package basic;
+
 public class IPhoneXI{
  
  public static void main(String[] args){
