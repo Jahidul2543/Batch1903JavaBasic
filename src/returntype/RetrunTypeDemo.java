@@ -4,36 +4,8 @@ public class RetrunTypeDemo {
 
     public static void main(String[] args) {
         RetrunTypeDemo obj = new RetrunTypeDemo();
-        ATMCard myATMCard = new ATMCard();
+        obj.makeTransaction();
 
-        // 1. Reading ATM Card
-       boolean cardStatus = obj.readATMCard(myATMCard);
-
-        // 2. Go for password validation if only card is valid
-
-
-        if(cardStatus==true){
-            boolean passwrodStatus = obj.validatePassowrd();
-
-            if(passwrodStatus == true){
-                System.out.println("Welcome to your account");
-                // 3. Allow customer to withdraw money if password is valid
-              String trnasactionStatus = obj.withdrawMoney(); // disperse
-                if(trnasactionStatus.equals("Successful")){
-                    // 4. End Transaction
-                    obj.endTransaction();
-                }
-                else {
-                    System.out.println(" Put valid amount ");
-                }
-            }
-            else {
-                System.out.println("Password is invalid, provide correct password");
-            }
-        }
-        else {
-            System.out.println("This is an invalid card please try with valid card");
-        }
     }
 
     public boolean readATMCard(ATMCard atmCard){
@@ -44,7 +16,7 @@ public class RetrunTypeDemo {
 
     public boolean validatePassowrd(){
         System.out.println("Do password validation ");
-        boolean paswordValidationResult = false;
+        boolean paswordValidationResult = true;
         return paswordValidationResult;
 
     }
@@ -61,6 +33,42 @@ public class RetrunTypeDemo {
         String thankYouText = "Thanks for being with Citi Bank";
         System.out.println(thankYouText);
         return thankYouText;
+    }
+
+    public void makeTransaction(){
+
+        RetrunTypeDemo obj = new RetrunTypeDemo();
+        ATMCard myATMCard = new ATMCard();
+
+        // 1. Reading ATM Card
+        boolean cardStatus = obj.readATMCard(myATMCard);
+
+        // 2. Go for password validation if only card is valid
+
+
+        if(cardStatus==true){
+            boolean passwrodStatus = obj.validatePassowrd();
+
+            if(passwrodStatus == true){
+                System.out.println("Welcome to your account");
+                // 3. Allow customer to withdraw money if password is valid
+                String trnasactionStatus = obj.withdrawMoney(); // disperse
+
+                if(trnasactionStatus.equals("Successful")){
+                    // 4. End Transaction
+                    obj.endTransaction();
+                }
+                else {
+                    System.out.println(" Put valid amount ");
+                }
+            }
+            else {
+                System.out.println("Password is invalid, provide correct password");
+            }
+        }
+        else {
+            System.out.println("This is an invalid card please try with valid card");
+        }
     }
 
 }
