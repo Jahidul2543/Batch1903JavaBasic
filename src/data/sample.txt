@@ -1,0 +1,5 @@
+Hello!!!
+Hi!!
+How are you?
+end of a file value = -1
+keep reading until the value is -1
