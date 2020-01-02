@@ -28,10 +28,35 @@ public class ArrayDemo {
          *
          * */
          // 0, 1, 2, 3
-         for(int x = 0; x<=nameOfServices.length -1; x++ ){
+         for(int x = 0; x<=nameOfServices.length -1; x++ )
+         {
              System.out.println(nameOfServices[x]);
          }
+                        //  0,    1,   2,   3,   4,  5
+                        //  10,  11,  12,  13,  14,  15
+         double grade[] = {1.1, 1.2, 1.3, 1.4, 1.5, 1.7};
+
+         int i;
+         // 16-10 = 6
+         for(i=10; i <16; i++)
+         {
+             System.out.println(grade[i-10]);//0, 1, 2, 3, 4 ,5// 10
+         }
+
+         // I am smart I can identify from where to start and where to stop
+
+        for (double d: grade)
+        {
+            System.out.println(d);
+        }
 
     }
 
 }
+
+
+
+
+
+
+
